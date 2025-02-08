@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>HNG TASK 0</title>
+</head>
+<style>
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: arial;
+}
+
+.card-container{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ margin-top: 200px;
+}
+
+.card{
+ width: 700px;
+ overflow: hidden;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ border-radius: 15px;
+}
+
+.profilePicture{
+ width: 100%;
+ height: auto;
+}
+
+.card-content{
+ padding: 20px;
+}
+
+.fullName{
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ font-size: 30px;
+ font-weight: bolder;
+}
+
+.jobTitle{
+ text-transform: uppercase;
+ font-size: 25px;
+}
+
+.currentLocation{
+  margin-bottom: 10px;
+}
+
+.currentTimeUTC{
+  color: red;
+}
+
+h2{
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.shortBio{
+ font-size: 20px;
+ margin-bottom: 10px;
+}
+
+.emailAddress{
+ color: blue;
+ text-decoration: none;
+}
+
+.socialLinks{
+ color: blue;
+ text-decoration: none;
+ margin-left: 15px;
+}
+
+
+</style>
+
+
+<body>
+<div class="card-container">
+<div class="card">
+
+<img class="profilePicture" data-test id="profilePicture" src="IMG_9844.JPG">
+
+<div class="card-content">
+
+<p class="fullName" data-test id="fullName">Okafor Chukwuebuka</p>
+
+<p class="jobTitle" data-test id="jobTitle">Frontend Developer</p>
+
+<p data-test id="currentLocation" class="currentLocation">Lagos, Nigeria.
+
+<span data-test id="currentTimeUTC" class="currentTimeUTC">
+<script>
+		function today()
+		{
+			var day = new Date();
+			var dayNames = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", 
+							"Thursday", "Friday", "Saturday");
+			var x = document.getElementById("currentDay");
+			x.innerHTML = dayNames[day.getDay()];
+		}
+		</script>
+	<body onload="today()">
+		<span data-testid="currentDay" id="currentDay"></span>
+
+
+<span data-testid="currentDayUTC" id="datetime"></span>
+
+<script>
+			
+  var now = new Date();
+  var datetime = now.toLocaleString();
+  document.getElementById("datetime").innerHTML = datetime;
+</script>
+
+</span>
+
+</p>
+
+<h2>Bio</h2>
+
+<p class="shortBio" data-test id="shortBio">I am curious, thoughtful and always ready to expand my knowleadge. I am someone who always. explores new idea, connecting with others and finding meaning to life everyday. I am constantly seeking personal growth and always enjoying the simple moments in life. In general i am always looking to learn, share and grow.</p>
+
+
+
+<a href="https://myaccount.google.com/?pli=1&nlr=1" class="emailAddress" data-test id="emailAddress">Gmail</a>
+
+
+<a href="https://x.com/_kvngkunta?s=21&t=b65_moOt3lPY5r6wRddLQg" data-test id="socialLinks" class="socialLinks">Twitter</a>
+
+<a href="https://www.linkedin.com/in/chukwuebuka-okafor-47943b179?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" data-test id="socialLinks" class="socialLinks">LinkdIn</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
